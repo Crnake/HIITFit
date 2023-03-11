@@ -21,6 +21,8 @@
 		F52F320D29BC284900D202A7 /* burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F52F320929BC284900D202A7 /* burpee.mp4 */; };
 		F52F320F29BC363800D202A7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F320E29BC363800D202A7 /* HeaderView.swift */; };
 		F52F321129BC46A400D202A7 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F321029BC46A400D202A7 /* RatingView.swift */; };
+		F52F321329BC4B5900D202A7 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F321229BC4B5900D202A7 /* HistoryView.swift */; };
+		F52F321529BC5EC500D202A7 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F321429BC5EC500D202A7 /* SuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		F52F320929BC284900D202A7 /* burpee.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = burpee.mp4; sourceTree = "<group>"; };
 		F52F320E29BC363800D202A7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F52F321029BC46A400D202A7 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		F52F321229BC4B5900D202A7 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		F52F321429BC5EC500D202A7 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				F52F31F029BB3D4200D202A7 /* ContentView.swift */,
+				F52F321229BC4B5900D202A7 /* HistoryView.swift */,
 				F52F31FC29BC265C00D202A7 /* WelcomeView.swift */,
+				F52F321429BC5EC500D202A7 /* SuccessView.swift */,
 				F52F31FE29BC267300D202A7 /* ExerciseView.swift */,
 				F52F321029BC46A400D202A7 /* RatingView.swift */,
 				F52F320E29BC363800D202A7 /* HeaderView.swift */,
@@ -189,11 +195,13 @@
 			files = (
 				F52F31FF29BC267300D202A7 /* ExerciseView.swift in Sources */,
 				F52F320329BC26B700D202A7 /* ImageExtension.swift in Sources */,
+				F52F321529BC5EC500D202A7 /* SuccessView.swift in Sources */,
 				F52F320129BC26A800D202A7 /* DateExtension.swift in Sources */,
 				F52F321129BC46A400D202A7 /* RatingView.swift in Sources */,
 				F52F31F129BB3D4200D202A7 /* ContentView.swift in Sources */,
 				F52F31FD29BC265C00D202A7 /* WelcomeView.swift in Sources */,
 				F52F31EF29BB3D4200D202A7 /* HIITFitApp.swift in Sources */,
+				F52F321329BC4B5900D202A7 /* HistoryView.swift in Sources */,
 				F52F320F29BC363800D202A7 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

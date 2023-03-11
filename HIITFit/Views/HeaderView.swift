@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct HeaderView: View {
-    let exerciseName: String
+    let titleText: String
     var body: some View {
         VStack {
-            Text(exerciseName)
+            Text(titleText)
                 .font(.largeTitle)
             HStack {
+                Image(systemName: "hand.wave")
                 Image(systemName: "1.circle")
                 Image(systemName: "2.circle")
                 Image(systemName: "3.circle")
@@ -27,9 +28,9 @@ struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         // 这里的Group为什么没有将两个View合并到同一个View中去？？？
         Group {
-            HeaderView(exerciseName: "Squat")
+            HeaderView(titleText: "Squat")
                 .previewLayout(.sizeThatFits)
-            HeaderView(exerciseName: "Squat")
+            HeaderView(titleText: "Squat")
                 .preferredColorScheme(.dark)
                 .environment(\.sizeCategory, .accessibilityLarge)
                 .previewLayout(.sizeThatFits)
