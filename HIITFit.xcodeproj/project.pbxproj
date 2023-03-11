@@ -11,6 +11,14 @@
 		F52F31F129BB3D4200D202A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F31F029BB3D4200D202A7 /* ContentView.swift */; };
 		F52F31F329BB3D4300D202A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F52F31F229BB3D4300D202A7 /* Assets.xcassets */; };
 		F52F31F629BB3D4300D202A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F52F31F529BB3D4300D202A7 /* Preview Assets.xcassets */; };
+		F52F31FD29BC265C00D202A7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F31FC29BC265C00D202A7 /* WelcomeView.swift */; };
+		F52F31FF29BC267300D202A7 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F31FE29BC267300D202A7 /* ExerciseView.swift */; };
+		F52F320129BC26A800D202A7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F320029BC26A800D202A7 /* DateExtension.swift */; };
+		F52F320329BC26B700D202A7 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F320229BC26B700D202A7 /* ImageExtension.swift */; };
+		F52F320A29BC284900D202A7 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F52F320629BC284800D202A7 /* sun-salute.mp4 */; };
+		F52F320B29BC284900D202A7 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F52F320729BC284800D202A7 /* squat.mp4 */; };
+		F52F320C29BC284900D202A7 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F52F320829BC284800D202A7 /* step-up.mp4 */; };
+		F52F320D29BC284900D202A7 /* burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F52F320929BC284900D202A7 /* burpee.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		F52F31F029BB3D4200D202A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F52F31F229BB3D4300D202A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F52F31F529BB3D4300D202A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F52F31FC29BC265C00D202A7 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F52F31FE29BC267300D202A7 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		F52F320029BC26A800D202A7 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F52F320229BC26B700D202A7 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		F52F320629BC284800D202A7 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
+		F52F320729BC284800D202A7 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat.mp4; sourceTree = "<group>"; };
+		F52F320829BC284800D202A7 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
+		F52F320929BC284900D202A7 /* burpee.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = burpee.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				F52F31EE29BB3D4200D202A7 /* HIITFitApp.swift */,
-				F52F31F029BB3D4200D202A7 /* ContentView.swift */,
+				F52F320429BC272D00D202A7 /* Views */,
+				F52F320029BC26A800D202A7 /* DateExtension.swift */,
+				F52F320229BC26B700D202A7 /* ImageExtension.swift */,
+				F52F320529BC282200D202A7 /* Videos */,
 				F52F31F229BB3D4300D202A7 /* Assets.xcassets */,
 				F52F31F429BB3D4300D202A7 /* Preview Content */,
 			);
@@ -65,6 +84,27 @@
 				F52F31F529BB3D4300D202A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F52F320429BC272D00D202A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F52F31F029BB3D4200D202A7 /* ContentView.swift */,
+				F52F31FC29BC265C00D202A7 /* WelcomeView.swift */,
+				F52F31FE29BC267300D202A7 /* ExerciseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F52F320529BC282200D202A7 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				F52F320929BC284900D202A7 /* burpee.mp4 */,
+				F52F320729BC284800D202A7 /* squat.mp4 */,
+				F52F320829BC284800D202A7 /* step-up.mp4 */,
+				F52F320629BC284800D202A7 /* sun-salute.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +165,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52F320C29BC284900D202A7 /* step-up.mp4 in Resources */,
 				F52F31F629BB3D4300D202A7 /* Preview Assets.xcassets in Resources */,
+				F52F320D29BC284900D202A7 /* burpee.mp4 in Resources */,
+				F52F320A29BC284900D202A7 /* sun-salute.mp4 in Resources */,
+				F52F320B29BC284900D202A7 /* squat.mp4 in Resources */,
 				F52F31F329BB3D4300D202A7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52F31FF29BC267300D202A7 /* ExerciseView.swift in Sources */,
+				F52F320329BC26B700D202A7 /* ImageExtension.swift in Sources */,
+				F52F320129BC26A800D202A7 /* DateExtension.swift in Sources */,
 				F52F31F129BB3D4200D202A7 /* ContentView.swift in Sources */,
+				F52F31FD29BC265C00D202A7 /* WelcomeView.swift in Sources */,
 				F52F31EF29BB3D4200D202A7 /* HIITFitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HIITFit/Preview Content\"";
+				DEVELOPMENT_TEAM = MYH8MWGJ33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HIITFit/Preview Content\"";
+				DEVELOPMENT_TEAM = MYH8MWGJ33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
