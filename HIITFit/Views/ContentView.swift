@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 9
     var body: some View {
-        TabView {
-            WelcomeView()
+        TabView(selection: $selectedTab) {
+            WelcomeView(selectedTab: $selectedTab).tag(9)
             ForEach(0 ..< Exercise.exercises.count) { number in
-                ExerciseView(index: number)
+                ExerciseView(selectedTab: $selectedTab, index: number).tag(number)
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))

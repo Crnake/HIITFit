@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @Binding var selectedTab: Int
+    @State private var showHistory = false
     var body: some View {
         ZStack {
             VStack {
-                HeaderView(titleText: "Welcome")
+                HeaderView(selectedTab: $selectedTab,titleText: "Welcome")
                 Spacer()
-                Button("History") {}
-                    .padding(.bottom)
+                Button("History") {
+                    showHistory.toggle()
+                }.sheet(isPresented: $showHistory) {
+                    HistoryView(showHistory: $showHistory)
+                }.padding(.bottom)
             }
             VStack {
                 HStack(alignment: .bottom) {
@@ -31,7 +36,7 @@ struct WelcomeView: View {
                         .resizedToFill(width: 200, height: 200) // 自定义modifier，结合了上面的三个modifier
                         .clipShape(Circle())
                 }
-                Button(action: {}) {
+                Button(action: { selectedTab = 0 }) {
                     Text("Get Started")
                     Image(systemName: "arrow.right.circle")
 //                    Label("Get Started", systemImage: "arrow.right.circle") // 固定了图片在前，文本在后
@@ -45,6 +50,6 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(selectedTab: .constant(9))
     }
 }
