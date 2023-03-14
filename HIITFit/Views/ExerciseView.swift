@@ -12,8 +12,11 @@ struct ExerciseView: View {
     @Binding var selectedTab: Int
     @State private var rating = 0
     @State private var showSuccess = false
+    @State private var showHistory = false
     let index: Int
-    let interval: CFTimeInterval = 30
+    @State private var timeDone = false
+    @State private var showTimer = false
+    @EnvironmentObject var history: HistoryStore
     var body: some View {
         // Option-Command-[or]: 上下移动行
         GeometryReader { geometry in
@@ -27,25 +30,35 @@ struct ExerciseView: View {
                     Text("Couldn't find \(Exercise.exercises[index].videoName).mp4")
                         .foregroundColor(.red)
                 }
-                Text(Date().addingTimeInterval(interval), style: .timer)
-                    .font(.system(size: 90))
                 HStack(spacing: 150) {
-                    Button("Start Exercise") {}
+                    Button("Start Exercise") {
+                        showTimer.toggle()
+                    }
                     Button("Done") {
+                        history.addDoneExercise(Exercise.exercises[index].exerciseName)
+                        timeDone = false
+                        showTimer.toggle()
                         if lastExercise {
                             showSuccess.toggle()
                         } else {
                             selectedTab += 1
                         }
-                    }.sheet(isPresented: $showSuccess) {
+                    }.disabled(!timeDone)
+                    .sheet(isPresented: $showSuccess) {
                         SuccessView(selectedTab: $selectedTab)
                     }
                 }.font(.title3).padding()
+                if showTimer {
+                    TimerView(timerDone: $timeDone)
+                }
+                Spacer()
                 RatingView(rating: $rating)
                     .padding()
-                Spacer()
-                Button("History") {}
-                    .padding(.bottom)
+                Button("History") {
+                    showHistory.toggle()
+                }.sheet(isPresented: $showHistory) {
+                    HistoryView(showHistory: $showHistory)
+                }.padding(.bottom)
             }
         }
     }
@@ -57,7 +70,8 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), index: 3) // 参数1要求传递一个Binding，但是对于这个preview来说是困难的，一般Binding都来自于上一级view，所以SwiftUI提供了Binding type方法constant(_:)来创建一个临时需要的Binding
+        ExerciseView(selectedTab: .constant(3), index: 3) // 参数1要求传递一个Binding，但是对于这个preview来说是困难的，一般Binding都来自于上一级view，所以SwiftUI提供了Binding type方法constant(_:)来创建一个临时需要的Binding
+            .environmentObject(HistoryStore())
     }
 }
 

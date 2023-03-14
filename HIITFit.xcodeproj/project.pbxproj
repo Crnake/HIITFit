@@ -26,6 +26,7 @@
 		F5CDE6A729BF522E00532FF9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDE6A629BF522E00532FF9 /* Exercise.swift */; };
 		F5CDE6AA29BF586300532FF9 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDE6A929BF586300532FF9 /* HistoryStore.swift */; };
 		F5F3C0ED29BF6408001314CF /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3C0EC29BF6408001314CF /* HistoryStoreDevData.swift */; };
+		F5F3C0F129C0AD5D001314CF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3C0F029C0AD5D001314CF /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		F5CDE6A629BF522E00532FF9 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		F5CDE6A929BF586300532FF9 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
 		F5F3C0EC29BF6408001314CF /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
+		F5F3C0F029C0AD5D001314CF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				F52F31FC29BC265C00D202A7 /* WelcomeView.swift */,
 				F52F321429BC5EC500D202A7 /* SuccessView.swift */,
 				F52F31FE29BC267300D202A7 /* ExerciseView.swift */,
+				F5F3C0F029C0AD5D001314CF /* TimerView.swift */,
 				F52F321029BC46A400D202A7 /* RatingView.swift */,
 				F52F320E29BC363800D202A7 /* HeaderView.swift */,
 			);
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F3C0F129C0AD5D001314CF /* TimerView.swift in Sources */,
 				F52F31FF29BC267300D202A7 /* ExerciseView.swift in Sources */,
 				F52F320329BC26B700D202A7 /* ImageExtension.swift in Sources */,
 				F52F321529BC5EC500D202A7 /* SuccessView.swift in Sources */,

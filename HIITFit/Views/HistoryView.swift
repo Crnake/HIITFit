@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HistoryView: View {
     @Binding var showHistory: Bool
-    let history = HistoryStore()
+    @EnvironmentObject var history: HistoryStore // 这里Swift应该是通过类型来判断Environment中的变量，但是如果有多个同类型的变量被申明为EnvironmentObject，如何识别需要的是哪一个？？？？？
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Button(action: {showHistory.toggle() }) {
@@ -36,5 +36,6 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView(showHistory: .constant(true))
+            .environmentObject(HistoryStore())
     }
 }

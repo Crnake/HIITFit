@@ -15,7 +15,7 @@ struct ContentView: View {
             ForEach(0 ..< Exercise.exercises.count) { number in
                 ExerciseView(selectedTab: $selectedTab, index: number).tag(number)
             }
-        }
+        }.environmentObject(HistoryStore()) // 将HistoryStore这个class的实例作为EnvironmentObject传递，这样YabView的subviews都可以通过environment访问这个class中的数据
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .padding()
     }
