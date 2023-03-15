@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedTab = 9
+    // 类似于AppStorage，那为什么不直接用AppStorage？？？？？
+    @SceneStorage("selectedTab") private var selectedTab = 9
     var body: some View {
         TabView(selection: $selectedTab) {
             WelcomeView(selectedTab: $selectedTab).tag(9)
@@ -18,6 +19,9 @@ struct ContentView: View {
         }.environmentObject(HistoryStore()) // 将HistoryStore这个class的实例作为EnvironmentObject传递，这样YabView的subviews都可以通过environment访问这个class中的数据
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .padding()
+        .onAppear {
+            print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        }
     }
 }
 
