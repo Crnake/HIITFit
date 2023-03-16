@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // 类似于AppStorage，那为什么不直接用AppStorage？？？？？
+    // SceneStorage在存储时会重新初始化与之相关的views，如果将下面的HistoryStore在这个页面初始化的话，每次selectedTab的改变都会造成重新初始化HistoryStore
     @SceneStorage("selectedTab") private var selectedTab = 9
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -16,7 +17,9 @@ struct ContentView: View {
             ForEach(0 ..< Exercise.exercises.count) { number in
                 ExerciseView(selectedTab: $selectedTab, index: number).tag(number)
             }
-        }.environmentObject(HistoryStore()) // 将HistoryStore这个class的实例作为EnvironmentObject传递，这样YabView的subviews都可以通过environment访问这个class中的数据
+        }
+        //将HistoryStore这个class的实例作为EnvironmentObject传递，这样YabView的subviews都可以通过environment访问这个class中的数据
+//        .environmentObject(HistoryStore())
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .padding()
         .onAppear {
