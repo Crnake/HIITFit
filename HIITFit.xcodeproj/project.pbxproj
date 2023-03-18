@@ -26,6 +26,11 @@
 		F5B5ADB429C187BD00AE6605 /* CircularSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B5ADB329C187BD00AE6605 /* CircularSliderView.swift */; };
 		F5CDE6A729BF522E00532FF9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDE6A629BF522E00532FF9 /* Exercise.swift */; };
 		F5CDE6AA29BF586300532FF9 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDE6A929BF586300532FF9 /* HistoryStore.swift */; };
+		F5E1E7B129C439C2007E71C4 /* RaisedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1E7B029C439C2007E71C4 /* RaisedButton.swift */; };
+		F5E1E7B329C44A8D007E71C4 /* EmbossedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1E7B229C44A8D007E71C4 /* EmbossedButton.swift */; };
+		F5E1E7B529C45295007E71C4 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1E7B429C45295007E71C4 /* ContainerView.swift */; };
+		F5E1E7B729C45604007E71C4 /* WelcomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1E7B629C45604007E71C4 /* WelcomeImages.swift */; };
+		F5E1E7B929C459FE007E71C4 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1E7B829C459FE007E71C4 /* GradientBackground.swift */; };
 		F5F3C0ED29BF6408001314CF /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3C0EC29BF6408001314CF /* HistoryStoreDevData.swift */; };
 		F5F3C0F129C0AD5D001314CF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3C0F029C0AD5D001314CF /* TimerView.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +56,11 @@
 		F5B5ADB329C187BD00AE6605 /* CircularSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderView.swift; sourceTree = "<group>"; };
 		F5CDE6A629BF522E00532FF9 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		F5CDE6A929BF586300532FF9 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+		F5E1E7B029C439C2007E71C4 /* RaisedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButton.swift; sourceTree = "<group>"; };
+		F5E1E7B229C44A8D007E71C4 /* EmbossedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButton.swift; sourceTree = "<group>"; };
+		F5E1E7B429C45295007E71C4 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		F5E1E7B629C45604007E71C4 /* WelcomeImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeImages.swift; sourceTree = "<group>"; };
+		F5E1E7B829C459FE007E71C4 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		F5F3C0EC29BF6408001314CF /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
 		F5F3C0F029C0AD5D001314CF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,12 +119,17 @@
 		F52F320429BC272D00D202A7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5E1E7B629C45604007E71C4 /* WelcomeImages.swift */,
 				F52F31F029BB3D4200D202A7 /* ContentView.swift */,
+				F5E1E7B829C459FE007E71C4 /* GradientBackground.swift */,
+				F5E1E7B429C45295007E71C4 /* ContainerView.swift */,
+				F5E1E7B029C439C2007E71C4 /* RaisedButton.swift */,
 				F52F321229BC4B5900D202A7 /* HistoryView.swift */,
 				F52F31FC29BC265C00D202A7 /* WelcomeView.swift */,
 				F52F321429BC5EC500D202A7 /* SuccessView.swift */,
 				F5B5ADB329C187BD00AE6605 /* CircularSliderView.swift */,
 				F52F31FE29BC267300D202A7 /* ExerciseView.swift */,
+				F5E1E7B229C44A8D007E71C4 /* EmbossedButton.swift */,
 				F5F3C0F029C0AD5D001314CF /* TimerView.swift */,
 				F52F321029BC46A400D202A7 /* RatingView.swift */,
 				F52F320E29BC363800D202A7 /* HeaderView.swift */,
@@ -217,11 +232,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B5ADB429C187BD00AE6605 /* CircularSliderView.swift in Sources */,
+				F5E1E7B129C439C2007E71C4 /* RaisedButton.swift in Sources */,
+				F5E1E7B529C45295007E71C4 /* ContainerView.swift in Sources */,
 				F5F3C0F129C0AD5D001314CF /* TimerView.swift in Sources */,
 				F52F31FF29BC267300D202A7 /* ExerciseView.swift in Sources */,
+				F5E1E7B929C459FE007E71C4 /* GradientBackground.swift in Sources */,
 				F52F320329BC26B700D202A7 /* ImageExtension.swift in Sources */,
 				F52F321529BC5EC500D202A7 /* SuccessView.swift in Sources */,
 				F52F320129BC26A800D202A7 /* DateExtension.swift in Sources */,
+				F5E1E7B729C45604007E71C4 /* WelcomeImages.swift in Sources */,
 				F5CDE6AA29BF586300532FF9 /* HistoryStore.swift in Sources */,
 				F5F3C0ED29BF6408001314CF /* HistoryStoreDevData.swift in Sources */,
 				F52F321129BC46A400D202A7 /* RatingView.swift in Sources */,
@@ -230,6 +249,7 @@
 				F52F31FD29BC265C00D202A7 /* WelcomeView.swift in Sources */,
 				F52F31EF29BB3D4200D202A7 /* HIITFitApp.swift in Sources */,
 				F52F321329BC4B5900D202A7 /* HistoryView.swift in Sources */,
+				F5E1E7B329C44A8D007E71C4 /* EmbossedButton.swift in Sources */,
 				F52F320F29BC363800D202A7 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

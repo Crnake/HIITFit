@@ -10,39 +10,34 @@ import SwiftUI
 struct WelcomeView: View {
     @Binding var selectedTab: Int
     @State private var showHistory = false
+    var getStartedButton: some View {
+        RaisedButton(buttonText: "Get Started") {
+            selectedTab = 0
+        }.padding()
+    }
+    var historyButton: some View {
+        Button(action: { showHistory = true }) {
+            Text("History").fontWeight(.bold)
+                .padding([.leading, .trailing], 5)
+        }.padding(.bottom, 10)
+            .buttonStyle(EmbossedButtonStyle())
+    }
     var body: some View {
-        ZStack {
+        GeometryReader { geometry in
             VStack {
                 HeaderView(selectedTab: $selectedTab,titleText: "Welcome")
                 Spacer()
-                Button("History") {
-                    showHistory.toggle()
-                }.sheet(isPresented: $showHistory) {
-                    HistoryView(showHistory: $showHistory)
-                }.padding(.bottom)
-            }
-            VStack {
-                HStack(alignment: .bottom) {
-                    VStack(alignment: .leading) {
-                        Text("Get fit")
-                            .font(.largeTitle)
-                        Text("with high intensity interval training")
-                            .font(.headline)
+                ContainerView {
+                    VStack {
+                        WelcomeView.images
+                        WelcomeView.welcomeText
+                        getStartedButton
+                        Spacer()
+                        historyButton
                     }
-                    Image("step-up")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fill)
-//                        .frame(width: 200.0, height: 200) // 以上三个modifier一般都是连用的
-                        .resizedToFill(width: 200, height: 200) // 自定义modifier，结合了上面的三个modifier
-                        .clipShape(Circle())
-                }
-                Button(action: { selectedTab = 0 }) {
-                    Text("Get Started")
-                    Image(systemName: "arrow.right.circle")
-//                    Label("Get Started", systemImage: "arrow.right.circle") // 固定了图片在前，文本在后
-                }.font(.title2)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 2))
+                }.frame(height: geometry.size.height * 0.8)
+            }.sheet(isPresented: $showHistory) {
+                HistoryView(showHistory: $showHistory)
             }
         }
     }

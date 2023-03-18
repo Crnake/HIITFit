@@ -12,7 +12,7 @@ struct CircularSliderView: View {
     private var progress: Double {
         (30.0 - Double(timeRemaining)) / 30.0
     }
-    let ringDiameter = 300.0
+    let ringDiameter = 200.0
     private var rotationAngle: Angle {
         Angle(degrees: 360.0 * progress)
     }
@@ -22,9 +22,11 @@ struct CircularSliderView: View {
             Circle().trim(from: 0, to: progress)
                 .stroke(Color(hue: 0.0, saturation: 0.5, brightness: 0.9), style: StrokeStyle(lineWidth: 20.0, lineCap: .round))
                 .rotationEffect(Angle(degrees: -90))
+                .animation(.linear(duration: 1.0))
             Circle().fill(Color.white).frame(width: 21, height: 21)
                 .offset(y: -ringDiameter / 2.0)
                 .rotationEffect(rotationAngle)
+                .animation(.linear(duration: 1.0))
             Text("\(timeRemaining)").font(.system(size: 90))
         }.frame(width: ringDiameter, height: ringDiameter)
     }

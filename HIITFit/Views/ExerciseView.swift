@@ -16,6 +16,18 @@ struct ExerciseView: View {
     @State private var timeDone = false
     @State private var showTimer = false
     @EnvironmentObject var history: HistoryStore
+    var startExerciseButton: some View {
+        RaisedButton(buttonText: "Start Exercise") {
+            showTimer.toggle()
+        }
+    }
+    var historyButton: some View {
+        Button(action: { showHistory = true }) {
+            Text("History").fontWeight(.bold)
+                .padding([.leading, .trailing], 5)
+        }.padding(.bottom, 10)
+            .buttonStyle(EmbossedButtonStyle())
+    }
     var body: some View {
         // Option-Command-[or]: 上下移动行
         GeometryReader { geometry in
@@ -30,9 +42,10 @@ struct ExerciseView: View {
                         .foregroundColor(.red)
                 }
                 HStack(spacing: 150) {
-                    Button("Start Exercise") {
-                        showTimer.toggle()
-                    }
+//                    Button("Start Exercise") {
+//                        showTimer.toggle()
+//                    }
+                    startExerciseButton
                     Button("Done") {
                         history.addDoneExercise(Exercise.exercises[index].exerciseName)
                         timeDone = false
@@ -53,11 +66,10 @@ struct ExerciseView: View {
                 Spacer()
                 RatingView(exerciseIndex: index)
                     .padding()
-                Button("History") {
-                    showHistory.toggle()
-                }.sheet(isPresented: $showHistory) {
-                    HistoryView(showHistory: $showHistory)
-                }.padding(.bottom)
+                historyButton
+                    .sheet(isPresented: $showHistory) {
+                        HistoryView(showHistory: $showHistory)
+                    }.padding(.bottom)
             }
         }
     }
